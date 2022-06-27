@@ -111,7 +111,6 @@ extension MapViewController: MapViewPresenterSenderProtocol {
     func failedToFetchData(_ error: String) {
         let banner = NotificationBanner(attributedTitle: NSAttributedString.init(string: error))
         banner.show()
-        print("error --- \(error)")
     }
     
     func dataFetchedSuccessfully(_ cars: [Cars]) {

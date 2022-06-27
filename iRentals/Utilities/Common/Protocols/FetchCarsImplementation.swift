@@ -24,7 +24,6 @@ class FetchCarsImplementation: RentalFetchCarsFromNetworkProtocol {
         client.fetch(endpoint) { result in
             switch result {
                 case .failure(let error):
-                    print(error)
                     self.presenter?.carsFetchFailed(error.localizedDescription)
                 case .success(let resultCars):
                     self.allCars = resultCars

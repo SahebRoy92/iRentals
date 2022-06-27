@@ -89,7 +89,6 @@ class DetailViewController: UIViewController {
                 case .success(let value):
                     self.carImage.image = value.image
                 case .failure(let error):
-                    print("Error --- \(error)")
                     self.carImage.image = UIImage.init(named: "placeholder")
             }
         }

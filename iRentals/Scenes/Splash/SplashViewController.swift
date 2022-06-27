@@ -62,6 +62,6 @@ extension SplashViewController: SplashPresenterSenderProtocol {
     }
     
     func didStartAnimation() {
-        print("Animation started ---- ")
+        
     }
 }

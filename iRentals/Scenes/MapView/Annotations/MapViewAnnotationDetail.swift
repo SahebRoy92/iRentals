@@ -41,11 +41,10 @@ final class AnnotationView: MKMarkerAnnotationView {
             .transition(.fade(0.25))
         ]) { result in
             switch result {
-                case .success(let value):
-                    print("Did Download Image --- ")
                 case .failure(let error):
-                    print("Error --- \(error)")
                     self.imageView.image = UIImage.init(named: Constants.Strings.placeholderImage)
+                default :
+                    break
                 }
         }
     }

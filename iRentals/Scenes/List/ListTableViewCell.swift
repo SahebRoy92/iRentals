@@ -105,10 +105,8 @@ class ListTableViewCell: UITableViewCell {
         ]) { result in
             switch result {
                 case .success(let value):
-                    print("Did Download Image --- ")
                     self.mainImage.image = value.image
                 case .failure(let error):
-                    print("Error --- \(error)")
                     self.mainImage.image = UIImage.init(named: Constants.Strings.placeholderImage)
                 }
         }
