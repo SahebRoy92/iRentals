@@ -7,6 +7,7 @@
 
 import UIKit
 import MapKit
+import NotificationBannerSwift
 
 class MapViewController: UIViewController {
 
@@ -41,14 +42,18 @@ class MapViewController: UIViewController {
         self.title = presenter.title
     }
     
-    func addDefaultLocation() {
+    func addDefaultLocation(_ location: CLLocationCoordinate2D? = nil) {
         // This is dummy function to set user's start location in map as Munich.
         // Normally this would be retrieved by CLLocation Delegate -
         // But for not using CLLocation for this project, by default I have kept the map's default location as Munich
         
-        let center = CLLocationCoordinate2DMake(48.1351, 11.5820)
-        let eyeCoordinate = CLLocationCoordinate2DMake(48.1351, 11.5820)
-        let mapCamera = MKMapCamera(lookingAtCenter: center, fromEyeCoordinate: eyeCoordinate, eyeAltitude: 600.0)
+        var center = CLLocationCoordinate2DMake(48.1351, 11.5820)
+        var eyeCoordinate = CLLocationCoordinate2DMake(48.1351, 11.5820)
+        if let hasCoordinates = location {
+            center = hasCoordinates
+            eyeCoordinate = hasCoordinates
+        }
+        let mapCamera = MKMapCamera(lookingAtCenter: center, fromEyeCoordinate: eyeCoordinate, eyeAltitude: 300.0)
         self.mapView.camera = mapCamera
     }
     
@@ -67,6 +72,10 @@ class MapViewController: UIViewController {
         for annotations in cars {
             let annotaion = presenter.configurePin(annotations)
             mapView.addAnnotation(annotaion)
+        }
+        if let firstLocation = cars.first {
+            let location = CLLocationCoordinate2DMake(firstLocation.latitude, firstLocation.longitude)
+            addDefaultLocation(location)
         }
     }
     
@@ -100,6 +109,8 @@ extension MapViewController: MKMapViewDelegate {
 
 extension MapViewController: MapViewPresenterSenderProtocol {
     func failedToFetchData(_ error: String) {
+        let banner = NotificationBanner(attributedTitle: NSAttributedString.init(string: error))
+        banner.show()
         print("error --- \(error)")
     }
     

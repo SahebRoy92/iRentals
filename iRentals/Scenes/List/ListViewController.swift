@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import NotificationBannerSwift
 
 class ListViewController: UIViewController {
 
@@ -90,7 +91,11 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuse) as? ListTableViewCell else { return ListTableViewCell.init(style: .default, reuseIdentifier: ListTableViewCell.reuse)}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: ListTableViewCell.reuse) as? ListTableViewCell else {
+            let cell =  ListTableViewCell.init(style: .default, reuseIdentifier: ListTableViewCell.reuse)
+            presenter.configureCellWithCar(cell, index: indexPath.row)
+            return cell
+        }
         presenter.configureCellWithCar(cell, index: indexPath.row)
         return cell
     }
@@ -100,11 +105,15 @@ extension ListViewController: ListPresenterSenderProtocol {
 
     func didFinishFetchingData() {
         DispatchQueue.main.async {
+            self.tableView.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         }
     }
     
     func didFailedToFetchData(_ error: String) {
-        
+        DispatchQueue.main.async {
+            let banner = NotificationBanner(attributedTitle: NSAttributedString.init(string: error))
+            banner.show()
+        }
     }
 }
