@@ -13,7 +13,6 @@
 		693207462865AD2400D00A9D /* SplashProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693207452865AD2400D00A9D /* SplashProtocols.swift */; };
 		693207482865AECB00D00A9D /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693207472865AECB00D00A9D /* AnimationView.swift */; };
 		6932074A2865AF5D00D00A9D /* splashAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = 693207492865AF5D00D00A9D /* splashAnimation.json */; };
-		6932074C2865B34F00D00A9D /* SplashConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932074B2865B34F00D00A9D /* SplashConfigurator.swift */; };
 		693207502865B86700D00A9D /* SplashConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6932074F2865B86700D00A9D /* SplashConfigTests.swift */; };
 		693207522865B8F200D00A9D /* SplashPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693207512865B8F200D00A9D /* SplashPresenterTests.swift */; };
 		693207542865B92300D00A9D /* SplashMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693207532865B92300D00A9D /* SplashMocks.swift */; };
@@ -41,6 +40,7 @@
 		695EC6692869A0B7004CC269 /* ListTestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695EC6682869A0B7004CC269 /* ListTestRouter.swift */; };
 		695EC66B2869A1A3004CC269 /* ListTestInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695EC66A2869A1A3004CC269 /* ListTestInteractor.swift */; };
 		695EC66D2869A647004CC269 /* ListTestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695EC66C2869A647004CC269 /* ListTestController.swift */; };
+		695EC66F2869CAAC004CC269 /* SplashConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695EC66E2869CAAC004CC269 /* SplashConfigurator.swift */; };
 		696CE3472862E1EF00A81B20 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696CE3462862E1EF00A81B20 /* AppDelegate.swift */; };
 		696CE3492862E1EF00A81B20 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 696CE3482862E1EF00A81B20 /* SceneDelegate.swift */; };
 		696CE3502862E1F200A81B20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 696CE34F2862E1F200A81B20 /* Assets.xcassets */; };
@@ -108,7 +108,6 @@
 		693207452865AD2400D00A9D /* SplashProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashProtocols.swift; sourceTree = "<group>"; };
 		693207472865AECB00D00A9D /* AnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationView.swift; sourceTree = "<group>"; };
 		693207492865AF5D00D00A9D /* splashAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = splashAnimation.json; sourceTree = "<group>"; };
-		6932074B2865B34F00D00A9D /* SplashConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SplashConfigurator.swift; path = ../../../../../../Work/SplashConfigurator.swift; sourceTree = "<group>"; };
 		6932074F2865B86700D00A9D /* SplashConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashConfigTests.swift; sourceTree = "<group>"; };
 		693207512865B8F200D00A9D /* SplashPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenterTests.swift; sourceTree = "<group>"; };
 		693207532865B92300D00A9D /* SplashMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashMocks.swift; sourceTree = "<group>"; };
@@ -136,6 +135,7 @@
 		695EC6682869A0B7004CC269 /* ListTestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTestRouter.swift; sourceTree = "<group>"; };
 		695EC66A2869A1A3004CC269 /* ListTestInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTestInteractor.swift; sourceTree = "<group>"; };
 		695EC66C2869A647004CC269 /* ListTestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTestController.swift; sourceTree = "<group>"; };
+		695EC66E2869CAAC004CC269 /* SplashConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashConfigurator.swift; sourceTree = "<group>"; };
 		696CE3432862E1EF00A81B20 /* iRentals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iRentals.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		696CE3462862E1EF00A81B20 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		696CE3482862E1EF00A81B20 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -351,12 +351,12 @@
 		696CE37A2862E24900A81B20 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				695EC66E2869CAAC004CC269 /* SplashConfigurator.swift */,
 				6932073F2865ACF800D00A9D /* SplashPresenter.swift */,
 				693207432865AD0C00D00A9D /* SplashViewController.swift */,
 				693207412865AD0000D00A9D /* SplashRouter.swift */,
 				693207452865AD2400D00A9D /* SplashProtocols.swift */,
 				693207472865AECB00D00A9D /* AnimationView.swift */,
-				6932074B2865B34F00D00A9D /* SplashConfigurator.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -791,7 +791,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6932074C2865B34F00D00A9D /* SplashConfigurator.swift in Sources */,
 				693207422865AD0000D00A9D /* SplashRouter.swift in Sources */,
 				696CE3A2286463AE00A81B20 /* NetworkClient.swift in Sources */,
 				695D473B2867575400369ECA /* MainTabPresenter.swift in Sources */,
@@ -823,6 +822,7 @@
 				695D47552867A6E800369ECA /* DetailViewController.swift in Sources */,
 				696CE3472862E1EF00A81B20 /* AppDelegate.swift in Sources */,
 				696CE3492862E1EF00A81B20 /* SceneDelegate.swift in Sources */,
+				695EC66F2869CAAC004CC269 /* SplashConfigurator.swift in Sources */,
 				695D474D28676F4C00369ECA /* CarAnnotations.swift in Sources */,
 				695D47612868870900369ECA /* ListConfigurator.swift in Sources */,
 				696CE3A02864613D00A81B20 /* Network.swift in Sources */,
