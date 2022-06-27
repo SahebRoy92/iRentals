@@ -27,4 +27,4 @@ protocol MapViewInteractorRecieverProtocol: FetchCarsImplementation {
 
 protocol MapViewInteractorSenderProtocol: RentalInteractorSenderProtocol {}
 
-protocol MapViewRouterProtocol : RentalRouterPushToDetailProtocol {}
+protocol MapViewRouterProtocol: RentalRouterPushToDetailProtocol {}

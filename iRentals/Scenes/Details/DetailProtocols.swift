@@ -23,4 +23,3 @@ protocol DetailPresenterRecieverProtocol {
     var clean: String {get}
     var carImage: String {get}
 }
-

@@ -17,7 +17,6 @@ class DetailViewController: UIViewController {
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        //imageView.backgroundColor = .clear
         return imageView
     }()
     
@@ -27,7 +26,6 @@ class DetailViewController: UIViewController {
         stackview.spacing = 10.0
         stackview.axis = .vertical
         stackview.translatesAutoresizingMaskIntoConstraints = false
-        //stackview.backgroundColor = .clear
         return stackview
     }()
     

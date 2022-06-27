@@ -8,7 +8,6 @@
 import Foundation
 import SwiftUI
 
-
 final class MainTabPresenter: MainTabbarPresenterRecieverProtocols {
     var localization: LocalizationInterface {
         RentalAppManager.shared.localization

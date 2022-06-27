@@ -99,4 +99,3 @@ extension ListMockPresenter: ListInteractorSenderProtocol {
         fetchedCar = false
     }
 }
-

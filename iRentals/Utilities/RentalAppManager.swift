@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 class RentalAppManager {
     static let shared = RentalAppManager()
     private (set) var localization = RentalLocalization()

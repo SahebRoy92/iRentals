@@ -44,8 +44,8 @@ class NetworkTests: XCTestCase {
                 case .success(let cars):
                     expectation.fulfill()
                     XCTAssertNotNil(cars)
-                case .failure( _ ):
-                    XCTFail("Network client returned error--")
+                case .failure(let error):
+                XCTFail(error.localizedDescription)
             }
         }
         self.wait(for: [expectation], timeout: 5.0)
@@ -57,8 +57,8 @@ class NetworkTests: XCTestCase {
         let expectation = self.expectation(description: "performing network call--")
         client.fetch(failureEndpoint) { result in
             switch result {
-                case .success( _ ):
-                    XCTFail("This shouldn't be called --- ")
+                case .success(let cars):
+                    XCTFail("This shouldn't be called ---\(cars.count) ")
                 case .failure(let error):
                     expectation.fulfill()
                     XCTAssertNotNil(error)

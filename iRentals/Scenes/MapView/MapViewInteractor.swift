@@ -11,7 +11,7 @@ final class MapViewInteractor: FetchCarsImplementation {
 
 }
 
-extension MapViewInteractor : MapViewInteractorRecieverProtocol {
+extension MapViewInteractor: MapViewInteractorRecieverProtocol {
     func getCarForid(_ id: String) -> Cars? {
         self.allCars?.filter({$0.id == id}).first
     }
