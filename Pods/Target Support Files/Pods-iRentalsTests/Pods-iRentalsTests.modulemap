@@ -1,0 +1,6 @@
+framework module Pods_iRentalsTests {
+  umbrella header "Pods-iRentalsTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

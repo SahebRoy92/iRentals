@@ -1,0 +1,6 @@
+${PODS_ROOT}/Target Support Files/Pods-iRentals/Pods-iRentals-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework
+${BUILT_PRODUCTS_DIR}/MarqueeLabel/MarqueeLabel.framework
+${BUILT_PRODUCTS_DIR}/NotificationBannerSwift/NotificationBannerSwift.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework
